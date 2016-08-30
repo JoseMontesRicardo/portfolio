@@ -1,0 +1,70 @@
+blue = #2196F3
+gray-shadow = #b6b6b6
+
+@import 'nib/vendor'
+vendor-prefixes = o ms moz webkit official
+
+@keyframes effect
+	0%
+		transform translateX(100vh)
+	20%
+		transform translateX(80vh)
+	40%
+		transform translateX(60vh)
+	60%
+		transform translateX(40vh)
+	80%
+		transform translateX(20vh)
+	100%
+		transform translateX(0vh)
+
+html
+	font-family 'Source Sans Pro', sans-serif
+	font-size 16px
+
+body
+	height 250vh
+		
+.web-header
+	background-color blue
+	display flex
+	flex-direction column
+	justify-content center
+	height 10vh
+	position fixed
+	width 100vw
+	&__content__nav
+		display flex
+		justify-content space-around
+		&__name
+			color white
+			// font-weight bold
+			font-size 1.3rem
+			margin 0
+		&__options
+			&__list
+				display flex
+				list-style none
+				margin 0
+				padding 0
+				&__items
+					a
+						color white
+						font-weight bold
+						padding 1rem
+						text-decoration none
+						text-transform uppercase
+
+.header-body
+	background-color blue
+	box-shadow 0 6px 10px #b6b6b6
+	display flex
+	flex-direction column
+	justify-content center
+	height 35vh
+	&__title
+		color white
+		margin 0
+		font-size 3rem
+			
+		

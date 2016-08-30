@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="portfolioApp">
 <head>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.css"> -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+	<link rel="stylesheet" href="css/styles.css">
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
 <body>
-	<h1>te amoooo preci</h1>
+	<header class="web-header">
+		<div class="web-header__content__nav">
+			<p class="web-header__content__nav__name"> Jose Montes Ricardo</p>
+			<nav class="web-header__content__nav__options">
+				<ul class="web-header__content__nav__options__list">
+					<li class="web-header__content__nav__options__list__items"><a href="#/home">Inicio</a></li>
+					<li class="web-header__content__nav__options__list__items"><a href="#/tools">Herramientas</a></li>
+					<li class="web-header__content__nav__options__list__items"><a href="">hola</a></li>
+					<li class="web-header__content__nav__options__list__items"><a href="">hola</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 	<div ng-view></div>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js" ></script>
 	<script src="https://code.angularjs.org/1.5.8/angular-route.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/directives.js"></script>
+	<script src="js/controllers.js"></script>
 </body>
 </html>
