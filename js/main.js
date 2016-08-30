@@ -1,12 +1,10 @@
-var app = angular.module('portfolioApp', [
-				'ngRoute'
-			]);
+var app = angular.module('portfolioApp', ['ngRoute']);
 	
-	app.config(function($routerProvider){
-		$routerProvider
+	app.config(function($routeProvider){
+		$routeProvider
 			.when('/home',{
 				templateUrl: 'views/home.html'
 			}).otherwise({
-				redirectTO: '/'
+				redirectTo: '/'
 			})
 	})
