@@ -28,10 +28,10 @@ angular.module('portfolioApp.controllers', [])
 				} else {//si hace scroll hacia arriba
 					if ( $window.scrollY === 0 ){
 						angular.element(document.querySelector('.header-body')).css('height', '40vh')
-						angular.element($('.header-body__title')).show()
 						angular.element($('.header-body__image__box')).show()
-						angular.element($('.header-body__title')).addClass('_show')
+						angular.element($('.header-body__title')).show()
 						angular.element($('.header-body__image__box')).addClass('_show')
+						angular.element($('.header-body__title')).addClass('_show')
 						$timeout(function() {
 							angular.element($('.header-body__image__box')).removeClass('_show')
 							angular.element($('.header-body__title')).removeClass('_show')
