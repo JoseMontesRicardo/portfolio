@@ -18,16 +18,22 @@ angular.module('portfolioApp.controllers', [])
 						angular.element(document.querySelector('.web-header')).css('boxShadow', '0 6px 10px #b6b6b6')
 					if ( $window.scrollY >= 30 )
 						angular.element($('.header-body__title')).addClass('_hide')
+						angular.element($('.header-body__image__box')).addClass('_hide')
 						$timeout(function() {
 							angular.element($('.header-body__title')).removeClass('_hide')
+							angular.element($('.header-body__image__box')).removeClass('_hide')
 							angular.element($('.header-body__title')).hide()
+							angular.element($('.header-body__image__box')).hide()
 						}, 100)
 				} else {//si hace scroll hacia arriba
 					if ( $window.scrollY === 0 ){
 						angular.element(document.querySelector('.header-body')).css('height', '40vh')
-							angular.element($('.header-body__title')).show()
+						angular.element($('.header-body__title')).show()
+						angular.element($('.header-body__image__box')).show()
 						angular.element($('.header-body__title')).addClass('_show')
+						angular.element($('.header-body__image__box')).addClass('_show')
 						$timeout(function() {
+							angular.element($('.header-body__image__box')).removeClass('_show')
 							angular.element($('.header-body__title')).removeClass('_show')
 						}, 100)
 					}
