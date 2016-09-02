@@ -1,42 +1,53 @@
-blue = #2196F3
+blue = rgb(66, 133, 244)
 gray-shadow = #b6b6b6
+_line = rgba(255,255,255,.5)
 
 @import 'nib/vendor'
 vendor-prefixes = o ms moz webkit official
 
-@keyframes effect
-	0%
-		transform translateX(100vh)
-	20%
-		transform translateX(80vh)
-	40%
-		transform translateX(60vh)
-	60%
-		transform translateX(40vh)
-	80%
-		transform translateX(20vh)
-	100%
-		transform translateX(0vh)
+@keyframes show
+	from
+		transform scale3d(.1, .1, 0)
+		opacity 0
+	to
+		transform scale3d(1, 1, 0)
+		opacity 1
+@keyframes hide
+	from
+		transform translateY(0vh)
+		opacity 1
+	to
+		transform translateY(-10vh)
+		opacity 0
+._show
+		animation-name show
+		animation-duration .2s
+		animation-timing-function ease
+._hide
+		animation-name hide
+		animation-duration .2s
+		animation-timing-function ease
 
 html
-	font-family 'Source Sans Pro', sans-serif
+	font-family 'Average Sans', sans-serif
 	font-size 16px
 
 body
 	height 250vh
-		
+
 .web-header
 	background-color blue
 	display flex
 	flex-direction column
 	justify-content center
-	height 10vh
+	height 7.5vh
 	position fixed
 	width 100vw
 	z-index 1
 	&__content__nav
 		display flex
 		justify-content space-around
+		flex-wrap wrap
 		&__name
 			color white
 			// font-weight bold
@@ -55,19 +66,33 @@ body
 						padding 1rem
 						text-decoration none
 						text-transform uppercase
+						border-bottom 2px solid rgba(255,255,255,0)
+						transition border-color .4s
+					a:hover
+						border-color _line
+					.activate-no-hover
+						border-bottom 2px solid rgba(255,255,255,1)
+					.activate-no-hover:hover
+						border-bottom 2px solid rgba(255,255,255,1)
 
 .header-body
 	background-color blue
 	box-shadow 0 6px 10px #b6b6b6
 	display flex
-	flex-direction column
-	justify-content center
-	height 35vh
-	z-index 1
+	// flex-direction column
+	align-items center
+	// justify-content flex-end
+	height 40vh
 	&__title
 		color white
 		margin 0
 		font-size 3rem
 		font-weight normal
+	&__image__box
+		width 10vw
+		img
+			// box-shadow 0 6px 10px #212121
+			border-radius 50%
+			width 100%
 			
 		
