@@ -1,0 +1,59 @@
+$color-text-light: #fff;
+$primary: #673ab7;
+
+.copy {
+    color: $color-text-light;
+    line-height: 1.5
+}
+
+.home-header {
+    a{
+        @extend .copy;
+        font-weight: 400;
+    }
+    background-image: url('../../../../../assets/imgs/my-travel.jpg');
+    box-shadow: inset 3px 25px 76px 255px rgb(0 0 0 / 34%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1.8rem 0.5rem;
+
+    &__avatar {
+        border-radius: 50%;
+        margin: auto;
+        width: 150px;
+        height: 150px;
+        position: relative;
+        border: 2px solid $color-text-light;
+        &__shadow {
+            background-color: transparent;
+            border-radius: 50%;
+            box-shadow: inset 455px -49px 33px -190px rgb(0 0 0 / 12%);
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__main-title {
+        @extend .copy;
+        color: $color-text-light;
+        font-size: 30px;
+        font-weight: 300;
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+    &__features {
+        @extend .copy;
+        font-size: 20px;
+        font-weight: 300;
+        margin: 0;
+        text-align: center;
+    }
+}
