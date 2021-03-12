@@ -6,7 +6,7 @@ $copy-color: #777;
     font-weight: 200;
 }
 
-.about-me-section {
+.tools-section {
     strong {
         @extend .description;
         a {
@@ -20,12 +20,9 @@ $copy-color: #777;
         margin: 2rem;
         text-align: center;
     }
-    &__description {
-        @extend .description;
-        font-size: 17px;
-        text-align: left;
+    &__technologies{
+        margin: auto;
         max-width: 920px;
         width: 75%;
-        margin: auto;
     }
 }

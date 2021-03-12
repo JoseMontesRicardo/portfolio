@@ -1,19 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatTabsModule } from '@angular/material/tabs';
 import { HomeContainerComponent } from './containers/home-container/home-container.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { GenericContainerModule } from '@shared/generic-container/generic-container.module';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { ToolsComponent } from './components/tools/tools.component';
 
 
 
 @NgModule({
-  declarations: [HomeContainerComponent, HeaderComponent, AboutMeComponent],
+  declarations: [HomeContainerComponent, HeaderComponent, AboutMeComponent, ToolsComponent],
   imports: [
     CommonModule,
     GenericContainerModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    MatTabsModule
   ]
 })
 export class HomeModule { }
