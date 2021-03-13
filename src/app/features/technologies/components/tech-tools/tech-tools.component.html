@@ -1,0 +1,6 @@
+<section class="tech-section animated fade-in fast">
+    <h1 class="tech-section__title primary">TECNOLOGÍAS</h1>
+    <div class="tech-section__technologies" fxLayout.xs="column" fxLayout="row wrap" >
+        <shared-tech-card *ngFor="let item of techToolsData" fxFlex="20%" [techCardData]="item"></shared-tech-card>
+    </div>
+</section>

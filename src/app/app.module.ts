@@ -10,7 +10,7 @@ import { HeaderModule } from '@shared/header/header.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

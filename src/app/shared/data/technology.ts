@@ -223,7 +223,7 @@ let technologies: Technology[] = [
         description: 'Esto es una descripción.',
     },
     {
-        id: '20',
+        id: '21',
         name: 'Heroku',
         logo: 'assets/imgs/heroku.svg',
         stack: {

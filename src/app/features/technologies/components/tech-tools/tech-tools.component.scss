@@ -1,0 +1,32 @@
+$copy-color: #777;
+
+.description {
+    color: $copy-color;
+    line-height: 1.5;
+    font-weight: 200;
+}
+
+.mat-tab-container {
+    padding: 1.5rem .5rem;
+}
+
+.tech-section {
+    strong {
+        @extend .description;
+        a {
+            @extend .description;
+            font-weight: 400;
+        }
+    }
+    padding: 1.8rem 0.5rem;
+
+    &__title {
+        margin: 2rem;
+        text-align: center;
+    }
+    &__technologies{
+        margin: auto;
+        // max-width: 1020px;
+        width: 80%;
+    }
+}
