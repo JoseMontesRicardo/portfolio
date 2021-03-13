@@ -1,0 +1,22 @@
+mat-card{
+    cursor: pointer;
+}
+
+.single-row-card {
+    margin: 10px;
+    &__container{
+        // align-items: center !important;
+        &__tech-logo{
+            margin: 0;
+            height: 40px;
+            img{
+                width: 100%;
+            }
+        }
+        &__tech-name{
+            margin: 0;
+            font-weight: bold;
+        }
+
+    }
+}

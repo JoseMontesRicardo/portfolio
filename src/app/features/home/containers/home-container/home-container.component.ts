@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Technology } from '@shared/types/all-types';
+import { homeData } from '../../data/home-module-data';
 
 @Component({
   selector: 'app-home-container',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-container.component.scss']
 })
 export class HomeContainerComponent implements OnInit {
+
+  technologies : Technology[] = homeData.technologies;
 
   constructor() { }
 

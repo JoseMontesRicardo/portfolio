@@ -1,11 +1,33 @@
 <section class="tools-section animated fade-in fast">
     <h1 class="tools-section__title primary">TECNOLOGÍAS</h1>
     <div class="tools-section__technologies">
-        <mat-tab-group>
-            <mat-tab label="BACK-END">BACK-END</mat-tab>
-            <mat-tab label="FRONT-END">FRONT-END</mat-tab>
-            <mat-tab label="BASES DE DATOS">BASES DE DATOS</mat-tab>
-            <mat-tab label="CLOUD">CLOUD</mat-tab>
+        <mat-tab-group animationDuration="400ms">
+            <mat-tab label="BACK-END">
+                <div fxLayout.xs="column" fxLayout="row" fxLayout="row no-wrap" class="mat-tab-container">
+                    <shared-single-row-card *ngFor="let item of backEndData" fxFlex="25%" [cardData]="item"></shared-single-row-card>
+                </div>
+            </mat-tab>
+            <mat-tab label="FRONT-END">
+                <div fxLayout.xs="column" fxLayout="row no-wrap" class="mat-tab-container">
+                    <ng-container *ngFor="let item of frontEndData">
+                        <shared-single-row-card *ngIf="item" fxFlex="25%" [cardData]="item"></shared-single-row-card>
+                    </ng-container>
+                </div>
+            </mat-tab>
+            <mat-tab label="BASES DE DATOS">
+                <div fxLayout.xs="column" fxLayout="row no-wrap" class="mat-tab-container">
+                    <ng-container *ngFor="let item of dbData">
+                        <shared-single-row-card *ngIf="item" fxFlex="25%" [cardData]="item"></shared-single-row-card>
+                    </ng-container>
+                </div>
+            </mat-tab>
+            <mat-tab label="CLOUD">
+                <div fxLayout.xs="column" fxLayout="row no-wrap" class="mat-tab-container">
+                    <ng-container *ngFor="let item of cloudData">
+                        <shared-single-row-card *ngIf="item" fxFlex="25%" [cardData]="item"></shared-single-row-card>
+                    </ng-container>
+                </div>
+            </mat-tab>
         </mat-tab-group>
     </div>
 </section>
