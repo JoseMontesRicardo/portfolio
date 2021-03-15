@@ -4,25 +4,25 @@
         <mat-tab-group animationDuration="400ms">
             <mat-tab label="BACK-END">
                 <div fxLayout.xs="column" fxLayout="row" fxLayout="row no-wrap" class="mat-tab-container">
-                    <shared-single-row-card *ngFor="let item of backEndData" fxFlex="25%" [cardData]="item" [routerLink]="['/technologies']" [queryParams]="{id: item.id}">
+                    <shared-single-row-card *ngFor="let item of backEndData" fxFlex="25%" [cardData]="item" [routerLink]="['/portafolio']" [queryParams]="{id: item.id}">
                     </shared-single-row-card>
                 </div>
             </mat-tab>
             <mat-tab label="FRONT-END">
                 <div fxLayout.xs="column" fxLayout="row no-wrap" class="mat-tab-container">
-                    <shared-single-row-card *ngFor="let item of frontEndData" fxFlex="25%" [cardData]="item" [routerLink]="['/technologies']" [queryParams]="{id: item.id}">
+                    <shared-single-row-card *ngFor="let item of frontEndData" fxFlex="25%" [cardData]="item" [routerLink]="['/portafolio']" [queryParams]="{id: item.id}">
                     </shared-single-row-card>
                 </div>
             </mat-tab>
             <mat-tab label="BASES DE DATOS">
                 <div fxLayout.xs="column" fxLayout="row no-wrap" class="mat-tab-container">
-                    <shared-single-row-card *ngFor="let item of dbData" fxFlex="25%" [cardData]="item" [routerLink]="['/technologies']" [queryParams]="{id: item.id}">
+                    <shared-single-row-card *ngFor="let item of dbData" fxFlex="25%" [cardData]="item" [routerLink]="['/portafolio']" [queryParams]="{id: item.id}">
                     </shared-single-row-card>
                 </div>
             </mat-tab>
             <mat-tab label="CLOUD">
                 <div fxLayout.xs="column" fxLayout="row no-wrap" class="mat-tab-container">
-                    <shared-single-row-card *ngFor="let item of cloudData" fxFlex="25%" [cardData]="item" [routerLink]="['/technologies']" [queryParams]="{id: item.id}">
+                    <shared-single-row-card *ngFor="let item of cloudData" fxFlex="25%" [cardData]="item" [routerLink]="['/portafolio']" [queryParams]="{id: item.id}">
                     </shared-single-row-card>
                 </div>
             </mat-tab>

@@ -7,7 +7,7 @@ const routes: Routes = [
     loadChildren: () => import('@features/home/home.module').then(m => m.HomeModule)
   },
   {
-    path: 'technologies',
+    path: 'portafolio',
     loadChildren: () => import('@features/technologies/technologies.module').then(m => m.TechnologiesModule)
   },
   { path: '**', redirectTo: '/home' }

@@ -1,24 +1,28 @@
-<ng-container *ngIf="techCardData">
+<ng-container *ngIf="productData">
     <!-- <mat-card class="tech-card mat-elevation-z2"> -->
-    <mat-card class="tech-card mat-elevation-z2" [ngClass]="{'mat-elevation-z10': isSelected }">
-        <div  #techCard class="tech-card__container" fxLayoutGap="10px"  fxLayoutAlign="center" fxFlexAlign="center">
-            <figure  class="tech-card__container__logo" fxFlexAlign="center" fxFlex="1 1 40px">
-                <img fxFlex="100%" src="{{techCardData.logo}}" alt="">
+    <mat-card class="tech-card mat-elevation-z2" [ngClass]="{'mat-elevation-z15': isSelected, 'selected-card': isSelected }">
+        <div #techCard class="tech-card__container" fxLayoutGap="10px" fxLayoutAlign="center" fxFlexAlign="center">
+            <figure class="tech-card__container__logo" fxFlexAlign="center" fxFlex="1 1 45px">
+                <img fxFlex="100%" src="{{productData.logo}}" alt="">
             </figure>
             <p class="tech-card__container__name" fxFlexAlign="center">
-                {{techCardData.name}}
+                {{productData.name}}
             </p>
         </div>
-        <mat-card-content>
-            <p>
-                The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                bred for hunting.
-            </p>
+        <mat-card-content class="tech-card__content">
+            <p class="tech-card__content__description">{{productData.description}}</p>
+            <p class="tech-card__content__company"><strong>Compañía: </strong>{{productData.company.displayName}}</p>
+            <p><strong>URL: </strong><a href="{{productData.url}}" target="_blank">{{productData.url}}</a></p>
+            <p class="tech-card__content__position"><strong>Cargo: </strong>{{productData.position}}</p>
         </mat-card-content>
-        <!-- <mat-card-actions>
-            <button mat-button>LIKE</button>
-            <button mat-button>SHARE</button>
-        </mat-card-actions> -->
+        <mat-divider></mat-divider>
+        <div class="tech-card__footer" fxLayoutAlign="space-between" fxFlexAlign="center">
+            <strong fxFlex="25%">Stack: </strong>
+            <div fxFlex="75%" fxLayout="row wrap" fxLayoutGap="3px" fxLayoutAlign="end" fxFlexAlign="center">
+                <ng-container *ngIf="productData.stack != []">
+                    <img *ngFor="let item of productData.stack" src="{{item.logo}}" alt="{{item.name}}">
+                </ng-container>
+            </div>
+        </div>
     </mat-card>
 </ng-container>

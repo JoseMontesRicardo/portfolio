@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild, ViewChildren } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Technology } from '@shared/types/all-types';
+import { Product, Technology } from '@shared/types/all-types';
 
 @Component({
   selector: 'shared-tech-card',
@@ -13,7 +13,7 @@ export class TechCardComponent implements OnInit, AfterViewInit {
   @ViewChild('techCard', { static: false }) element!: ElementRef<HTMLElement>;
 
   @Input()
-  techCardData: Technology | null = null;
+  productData: Product | null = null;
 
   constructor(
     private router: ActivatedRoute
@@ -23,18 +23,25 @@ export class TechCardComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
   }
 
+  findStack(id: string) {
+    return this.productData?.stack?.filter(tech => tech.id === id);
+  }
+
   ngAfterViewInit(): void {
+    let stackFound;
     setTimeout(() => {
       this.router.queryParams.subscribe(params => {
-        if (this.techCardData) {
-          if (params.id === this.techCardData.id) {
-            this.isSelected = this.techCardData.id === params.id;
-            console.log(this.element)
+        if (this.productData) {
+          stackFound = this.findStack(params.id);
+          if (stackFound?.length) {
+            console.log(stackFound)
+            this.isSelected = true;
             this.element.nativeElement.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" })
+            return
           }
         }
       });
-    }, 100);
+    }, 200);
   }
 
 }

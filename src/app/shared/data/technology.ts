@@ -9,6 +9,7 @@ let technologies: Technology[] = [
             code: 'back-end',
             dysplayName: 'back-end'
         },
+        product: ['1', '2', '3', '4', '5'],
         skillLevel: 9,//1-10
         description: 'Esto es una descripción.',
     },
@@ -21,6 +22,7 @@ let technologies: Technology[] = [
             dysplayName: 'back-end'
         },
         skillLevel: 7,//1-10
+        product: ['1', '2'],
         description: 'Esto es una descripción.',
     },
     {
@@ -32,6 +34,7 @@ let technologies: Technology[] = [
             dysplayName: 'back-end'
         },
         skillLevel: 7,//1-10
+        product: ['1', '2', '3', '4'],
         description: 'Esto es una descripción.',
     },
     {
@@ -43,6 +46,7 @@ let technologies: Technology[] = [
             dysplayName: 'back-end'
         },
         skillLevel: 7,//1-10
+        product: ['1', '2', '3'],
         description: 'Esto es una descripción.',
     },
     {
@@ -54,6 +58,7 @@ let technologies: Technology[] = [
             dysplayName: 'back-end'
         },
         skillLevel: 7,//1-10
+        product: ['1', '2'],
         description: 'Esto es una descripción.',
     },
     {
@@ -65,6 +70,7 @@ let technologies: Technology[] = [
             dysplayName: 'back-end'
         },
         skillLevel: 7,//1-10
+        product: ['1', '2', '3'],
         description: 'Esto es una descripción.',
     },
     {
@@ -76,6 +82,7 @@ let technologies: Technology[] = [
             dysplayName: 'back-end'
         },
         skillLevel: 7,//1-10
+        product: ['1', '2'],
         description: 'Esto es una descripción.',
     },
     {
@@ -87,6 +94,7 @@ let technologies: Technology[] = [
             dysplayName: 'front-end'
         },
         skillLevel: 7,//1-10
+        product: [],
         description: 'Esto es una descripción.',
     },
     {
@@ -98,6 +106,7 @@ let technologies: Technology[] = [
             dysplayName: 'front-end'
         },
         skillLevel: 7,//1-10
+        product: [],
         description: 'Esto es una descripción.',
     },
     {
@@ -109,6 +118,7 @@ let technologies: Technology[] = [
             dysplayName: 'front-end'
         },
         skillLevel: 7,//1-10
+        product: [],
         description: 'Esto es una descripción.',
     },
     {
@@ -120,6 +130,7 @@ let technologies: Technology[] = [
             dysplayName: 'front-end'
         },
         skillLevel: 7,//1-10
+        product: ['1', '2', '4', '5'],
         description: 'Esto es una descripción.',
     },
     {
@@ -131,6 +142,7 @@ let technologies: Technology[] = [
             dysplayName: 'front-end'
         },
         skillLevel: 7,//1-10
+        product: ['3'],
         description: 'Esto es una descripción.',
     },
     
@@ -143,6 +155,7 @@ let technologies: Technology[] = [
             dysplayName: 'DB'
         },
         skillLevel: 7,//1-10
+        product: ['1', '2', '3', '4'],
         description: 'Esto es una descripción.',
     },
     {
@@ -154,6 +167,7 @@ let technologies: Technology[] = [
             dysplayName: 'DB'
         },
         skillLevel: 7,//1-10
+        product: ['5'],
         description: 'Esto es una descripción.',
     },
     {
@@ -165,6 +179,7 @@ let technologies: Technology[] = [
             dysplayName: 'DB'
         },
         skillLevel: 7,//1-10
+        product: ['1'],
         description: 'Esto es una descripción.',
     },
     {
@@ -176,6 +191,7 @@ let technologies: Technology[] = [
             dysplayName: 'DB'
         },
         skillLevel: 7,//1-10
+        product: ['5'],
         description: 'Esto es una descripción.',
     },
     {
@@ -187,6 +203,7 @@ let technologies: Technology[] = [
             dysplayName: 'DB'
         },
         skillLevel: 7,//1-10
+        product: [],
         description: 'Esto es una descripción.',
     },
     {
@@ -198,6 +215,7 @@ let technologies: Technology[] = [
             dysplayName: 'cloud'
         },
         skillLevel: 7,//1-10
+        product: ['1', '3'],
         description: 'Esto es una descripción.',
     },
     {
@@ -209,6 +227,7 @@ let technologies: Technology[] = [
             dysplayName: 'cloud'
         },
         skillLevel: 7,//1-10
+        product: ['3'],
         description: 'Esto es una descripción.',
     },
     {
@@ -220,6 +239,7 @@ let technologies: Technology[] = [
             dysplayName: 'cloud'
         },
         skillLevel: 7,//1-10
+        product: ['4'],
         description: 'Esto es una descripción.',
     },
     {
@@ -231,6 +251,8 @@ let technologies: Technology[] = [
             dysplayName: 'cloud'
         },
         skillLevel: 7,//1-10
+        product: [],
+    
         description: 'Esto es una descripción.',
     }
 ]

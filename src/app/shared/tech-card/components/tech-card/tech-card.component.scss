@@ -1,15 +1,35 @@
+$primary: #673ab7;
+.selected-card {
+    border: 1px solid $primary;
+}
 .tech-card {
+    // height: 250px;
+    position: relative;
     margin: 5px;
     &__container {
         padding: 10px;
         &__logo {
-            height: 40px;
+            height: 45px;
             margin: 0;
         }
         &__name {
             font-size: 16px;
             font-weight: bold;
             margin: 0;
+        }
+    }
+
+    &__content {
+        height: 120px;
+        margin-bottom: 40px;
+        p {
+            margin-bottom: 6px;
+        }
+    }
+    &__footer {
+        padding-top: 16px;
+        img {
+            width: 22px;
         }
     }
 }

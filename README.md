@@ -1,4 +1,12 @@
 # MyResume
+npx angular-cli-ghpages --dir=dist/my-resume
+
+ng build --prod --base-href "https://josemontesricardo.github.io/portfolio/"
+
+https://stackblitz.com/edit/angular-material-star-rating-i2f93q?file=app%2Fstar-rating%2Fstar-rating.component.html
+
+https://medium.com/angular-chile/aplicaciones-multilenguaje-en-angular-7-con-ngx-translate-db8d1e7b380c
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 

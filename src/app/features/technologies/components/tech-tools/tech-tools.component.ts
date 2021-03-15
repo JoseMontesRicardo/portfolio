@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Technology } from '@shared/types/all-types';
+import { Product, Technology } from '@shared/types/all-types';
 
 @Component({
   selector: 'tech-tools',
@@ -9,7 +9,7 @@ import { Technology } from '@shared/types/all-types';
 export class TechToolsComponent implements OnInit {
 
   @Input()
-  techToolsData: Technology[] = [];
+  techToolsData: Product[] = [];
 
   constructor() { }
 
