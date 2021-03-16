@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild, ViewChildren } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product, Technology } from '@shared/types/all-types';
 
@@ -11,7 +11,7 @@ export class TechCardComponent implements OnInit, AfterViewInit {
   isSelected: boolean = false;
 
   @ViewChild('techCard', { static: false }) element!: ElementRef<HTMLElement>;
-
+  @Output() returnElementEvent = new EventEmitter<ElementRef<HTMLElement>>();
   @Input()
   productData: Product | null = null;
 
@@ -27,6 +27,10 @@ export class TechCardComponent implements OnInit, AfterViewInit {
     return this.productData?.stack?.filter(tech => tech.id === id);
   }
 
+  returnElement(elem: ElementRef<HTMLElement>) {
+      this.returnElementEvent.emit(elem);
+  }
+
   ngAfterViewInit(): void {
     let stackFound;
     setTimeout(() => {
@@ -34,10 +38,9 @@ export class TechCardComponent implements OnInit, AfterViewInit {
         if (this.productData) {
           stackFound = this.findStack(params.id);
           if (stackFound?.length) {
-            console.log(stackFound)
             this.isSelected = true;
-            this.element.nativeElement.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" })
-            return
+            this.returnElement(this.element);
+            // this.element.nativeElement.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" })
           }
         }
       });

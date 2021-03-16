@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { ActivatedRoute } from '@angular/router';
 import { Product, Technology } from '@shared/types/all-types';
 import { techData } from '../../data/tech-module-data';
 
@@ -11,20 +13,27 @@ export class TechnologiesContainerComponent implements OnInit {
 
   technologies: Technology[] = techData.technologies
   products: Product[] = techData.products
-  // .sort((a, b) => {
-  //   if (a.stack.code > b.stack.code) {
-  //     return -1;
-  //   }
-  //   if (a.stack.code < b.stack.code) {
-  //     return 1;
-  //   }
-  //   return 0;
-  // });
 
-  constructor() { }
+  constructor(
+    private _snackBar: MatSnackBar,
+    private router: ActivatedRoute,
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    let selectedTech: Technology | null;
     this.setTechnologies();
+    selectedTech = this.getSelectedTechnology();
+    if ( selectedTech ) {
+      this._snackBar.open(`Ahora mostraré proyectos donde usé '${selectedTech.name}'!!`, 'cerrar', {
+        duration: 3000,
+      });
+    }
+  }
+
+  getSelectedTechnology(): Technology | null {
+    let techIdFromQuery = this.router.snapshot.queryParams.id;
+    let selectedTech = this.technologies.filter(tech => tech.id === techIdFromQuery);
+    return selectedTech[0] ? selectedTech[0] : null;
   }
 
   setTechnologies() {

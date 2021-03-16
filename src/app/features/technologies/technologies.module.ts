@@ -6,8 +6,7 @@ import { GenericContainerModule } from '@shared/generic-container/generic-contai
 import { TechToolsComponent } from './components/tech-tools/tech-tools.component';
 import { TechCardModule } from '@shared/tech-card/tech-card.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [TechnologiesContainerComponent, TechToolsComponent],
@@ -17,6 +16,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     TechnologiesRoutingModule,
     GenericContainerModule,
     TechCardModule,
+    MatSnackBarModule,
   ]
 })
 export class TechnologiesModule { }
