@@ -30,3 +30,12 @@ $copy-color: #777;
         width: 75%;
     }
 }
+
+@media (max-width: 959px) {
+    .tools-section {
+        &__technologies{
+            max-width: 95%;
+            width: 95%;
+        }
+    }
+}

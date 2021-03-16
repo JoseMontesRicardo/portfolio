@@ -1,9 +1,9 @@
 <ng-container *ngIf="cardData">
     <mat-card class="single-row-card mat-elevation-z6">
-        <mat-card-content class="single-row-card__container" fxLayoutGap="10px"  fxLayoutAlign="center" fxFlexAlign="center"
+        <mat-card-content fxLayout.xs="column" class="single-row-card__container" fxLayoutGap="10px"  fxLayoutAlign="center" fxFlexAlign="center"
             fxLayout="row no-wrap">
             <figure class="single-row-card__container__tech-logo" fxFlexAlign="center" fxFlex="1 1 40px">
-                <img fxFlex="100%" src="{{cardData.logo}}" alt="">
+                <img fxFlex.xs="40px" fxFlex="100%" src="{{cardData.logo}}" alt="">
             </figure>
             <p class="single-row-card__container__tech-name" fxFlexAlign="center">
                 {{cardData.name}}
